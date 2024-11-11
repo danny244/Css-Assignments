@@ -62,33 +62,14 @@
 
 :root {
 	--max-width: 38rem;
-}
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-*::before,
-*::after {
-	box-sizing: inherit;
-}
-
-body {
-	font-family: Lato;
-	font-size: 0.7rem;
-	line-height: 1.5;
-	color: #000000;
-	background-color: #ffffff;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	image-rendering: auto;
-	scroll-behavior: smooth;
-	min-height: 100vh;
-	min-width: 100vw;
-	position: relative;
-	font-weight: 500;
+	--font-family: Lato;
+	--background-color: #ffffff;
+	--color: #000000;
+	--font-weight: 500;
+	--font-size: 0.7rem;
+	--line-height: 1.5;
+	--h1-font-size: 1rem;
+	--h1-font-weight: 800;
 }
 
 main {
@@ -96,18 +77,6 @@ main {
 	min-width: inherit;
 	display: block;
 }
-
-/* main::after {
-	content: "";
-	min-height: 100vh;
-	min-width: 100vw;
-	background-color: purple;
-    display: block;
-	position: absolute;
-    z-index: -1;
-	top: 0;
-	left: 0;
-} */
 
 main > section:first-child {
 	background-color: inherit;
@@ -120,14 +89,14 @@ main > section:first-child > div {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 3rem 2rem 2rem; /* edit on tablet screens */
+	padding: 3rem 1rem 2rem; /* edit on tablet screens */
 	margin: 0 auto;
 	background-color: inherit;
 }
 
 main > section:first-child > div > div > h1 {
-	font-weight: 800;
-	font-size: 1rem;
+	font-size: var(--h1-font-size);
+	font-weight: var(--h1-font-weight);
 	margin: 0 0 1.7rem 0;
 }
 
@@ -151,6 +120,10 @@ main > section:first-child > div > div > p:nth-child(2) {
 	font-size: inherit;
 	max-width: 14rem;
 }
+
+
+
+
 
 /* Section 2 */
 
@@ -191,7 +164,7 @@ main > section:nth-child(2) > div > div:first-child > h2 {
 }
 
 main > section:nth-child(2) > div > div:nth-child(2) {
-	padding: 0 2rem 2rem; /* edit on tablet screens */
+	padding: 0 1rem 2rem; /* edit on tablet screens */
 }
 
 main > section:nth-child(2) > div > div:nth-child(2) > p:first-child {
@@ -199,7 +172,7 @@ main > section:nth-child(2) > div > div:nth-child(2) > p:first-child {
 }
 
 main > section:nth-child(2)::after {
-	content: "";
+	content: "heyyy";
 	min-height: 100%;
 	min-width: 100vw;
 	background-color: #666666;
@@ -211,11 +184,11 @@ main > section:nth-child(2)::after {
 }
 
 @media (max-width: 480px) {
-	main > section:nth-child(2) > div > div:nth-child(2) {
-		padding: 0 1rem 1rem;
-	}
-
 	main > section:first-child > div {
 		padding: 2rem 1rem 2rem;
+	}
+
+	main > section:nth-child(2) > div > div:nth-child(2) {
+		padding: 0 1rem 1rem;
 	}
 }
