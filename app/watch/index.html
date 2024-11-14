@@ -1,29 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./index.css" />
-		<link rel="stylesheet" href="/lib/lib.css" />
-		<title>Novus Watch</title>
-	</head>
-	<body>
-		<main>
-			<section>
-				<div>
-					<div>
-						<p>New And Improved!</p>
-					</div>
-					<img src="./images/watch.jpg" alt="" />
-					<div>
-						<h1>
-							Novus Watch
-							<span>series IV</span>
-						</h1>
-						<p>The Pinnacle of fashion and tech. This Pinnacle piece is an homage to gilded palaces and minimal regalia combining nouveau-deco and brutalism influences in a compact Swiss-made watch.</p>
-					</div>
-				</div>
-			</section>
-		</main>
-	</body>
+
+<head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./index.css" />
+      <link rel="stylesheet" href="/lib/lib.css" />
+      <link rel="stylesheet" href="/lib/overlay/overlay.css">
+
+      <title>Novus Watch</title>
+</head>
+
+<body>
+      <button class="overlay-button">
+            <img hidden src="./images/button/dark.png" alt="icon">
+            <img src="./images/button/white.png" alt="icon">
+      </button>
+      <div class="overlay inactive">
+            <div class="overlay-contents">
+                  <div>
+                        <section>
+                              <header>
+                                    <h1>ALt School CSS Assignments</h1>
+                              </header>
+                        </section>
+
+
+                        <section>
+                              <div>
+                                    <a href="/app/otter/index.html">
+                                          <div>
+                                                <img src="/lib/overlay/images/otter.png" alt="otter">
+                                          </div>
+                                    </a>
+                              </div>
+                              <div>
+                                    <a href="/app/huckleberry/index.html">
+                                          <div>
+                                                <img src="/lib/overlay/images/huckleberry.png" alt="huckleberry">
+                                          </div>
+                                    </a>
+                              </div>
+                              <div>
+                                    <a href="/app/watch/index.html">
+                                          <div>
+                                                <img src="/lib/overlay/images/watch.png" alt="watch">
+                                          </div>
+                                    </a>
+                              </div>
+                              <div>
+                                    <a href="/app/individuals/index.html">
+                                          <div>
+                                                <img src="/lib/overlay/images/individuals.png" alt="individual">
+                                          </div>
+                                    </a>
+                              </div>
+                        </section>
+                  </div>
+            </div>
+      </div>
+
+
+      <main>
+            <section>
+                  <div>
+                        <div>
+                              <p>New And Improved!</p>
+                        </div>
+                        <img src="./images/watch.jpg" alt="" />
+                        <div>
+                              <h1>
+                                    Novus Watch
+                                    <span>series IV</span>
+                              </h1>
+                              <p>The Pinnacle of fashion and tech. This Pinnacle piece is an homage to gilded palaces
+                                    and minimal regalia combining nouveau-deco and brutalism influences in a compact
+                                    Swiss-made watch.</p>
+                        </div>
+                  </div>
+            </section>
+      </main>
+
+      <script defer src="/lib/overlay/overlay.js"></script>
+
+</body>
+
 </html>

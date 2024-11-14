@@ -36,7 +36,7 @@ main > div:nth-child(1) {
 	display: flex;
 	align-items: center;
 	gap: 1.5rem;
-	padding: 4rem 2rem;
+	padding: 5rem 2rem;
 }
 
 main > div > section {
@@ -47,7 +47,8 @@ main > div > section {
 }
 
 main > div > section > div {
-	/* margin-left: auto; */
+	margin-left: auto; 
+      /* uncomented margin auto */
 	width: 100%;
 }
 
