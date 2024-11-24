@@ -1,0 +1,29 @@
+/* :root {
+      --font-family: "Sofia Pro extralight";
+      --background-color: hsla(204, 33%, 97%, 1);
+      --primary-color: hsla(173, 96%, 28%, 1);
+      --secondary-color: hsla(211, 49%, 55%, 1);
+
+
+      --font-weight: 500;
+      --font-size: 0.7rem;
+      --line-height: 1.5;
+      --h1-font-size: 1.5rem;
+      --h1-font-weight: normal;
+
+      --sidebar-color: hsla(0, 0%, 100%, 1);
+      --sidebar-background-color: hsla(204, 84%, 41%, 1);
+
+      --form-font-family: "Sofia Pro extralight";
+      --form-color: hsla(211, 35%, 17%, 1);
+      --form-background-color: hsla(0, 0%, 100%, 1);
+      --form-border-color: 1px solid var(--primary-color);
+      --form-input-color: var(--color);
+      --form-input-background-color: hsla(216, 16%, 94%, 1);
+      --input-placeholder-color: hsla(213, 10%, 44%, 1);
+      --form-button-color: hsla(0, 0%, 100%, 1);
+
+      --max-width: 10rem;
+      --container-max-width: 50rem;
+}
+ */

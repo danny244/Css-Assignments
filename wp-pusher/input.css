@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+      --font-family: "Lato";
+      --background-color: hsla(204, 33%, 97%, 1);
+      --primary-color: hsla(173, 96%, 28%, 1);
+      --secondary-color: hsla(211, 49%, 55%, 1);
+      --color: hsla(211, 35%, 17%, 1);
+
+      --font-weight: 500;
+      --font-size: 0.8rem;
+      --line-height: 1.5;
+      --h1-font-size: 1.5rem;
+      --h1-font-weight: 700;
+
+      --sidebar-color: hsla(0, 0%, 100%, 1);
+      --sidebar-background-color: hsla(204, 84%, 41%, 1);
+
+      --form-color: hsla(211, 35%, 17%, 1);
+      --form-background-color: hsla(0, 0%, 100%, 1);
+      --form-inputs-border: 1px solid var(--primary-color);
+      --form-input-color: var(--color);
+      --form-input-background-color: hsla(216, 16%, 94%, 1);
+      --input-placeholder-color: hsla(213, 10%, 44%, 1);
+      --form-button-color: hsla(0, 0%, 100%, 1);
+
+      --max-width: 60rem;
+      --container-max-width: 45rem;
+      --border-color: hsla(204, 18%, 90%, 1);
+}
+
+@layer base {
+
+      nav,
+      .form_contents_border_bottom {
+            @apply border-b border-[--border-color];
+
+      }
+
+
+      input[type='number']::-webkit-outer-spin-button,
+      input[type='number']::-webkit-inner-spin-button,
+      input[type='number'] {
+            -webkit-appearance: none;
+            margin: 0;
+            -moz-appearance: textfield !important;
+      }
+}
+
+input {
+      outline: none;
+      border: none;
+}
+
+
+
+
+
+h1.wp-pusher {
+      text-shadow: 4px 4px hsla(0, 0%, 0%, 0.25);
+      line-height: 1;
+}
+
+h1.wp-pusher,
+label {
+      color: var(--color);
+}
+
+
+
+
+
+main {
+      min-width: inherit;
+      min-height: inherit;
+      display: flex;
+      justify-content: center;
+      /* remove on medium screen  */
+}
+
+
+
+
+
+
+
+
+.box_shadow {
+      box-shadow: 0px 5px 15px 0px hsla(0, 0%, 0%, 0.05);
+      box-shadow: 0px 15px 35px 0px hsla(204, 29%, 24%, 0.1);
+}
+
+@media not all and (min-width: 768px) {
+      .box_shadow {
+            box-shadow: none;
+      }
+}
+
+
+
+
+
+
+
+
+/* basic information */
+main>div>section>div>div>form .basic_information_inputs>div>input {
+      height: 1.7rem;
+      padding: 0.3rem 0.5rem;
+      border-radius: 0.125rem
+            /* 2px */
+      ;
+      background-color: var(--form-input-background-color);
+}
+
+main>div>section>div>div>form .basic_information_inputs>div>input:focus {
+      outline: none;
+      border: 2px solid var(--primary-color);
+}
+
+
+
+
+
+
+
+
+
+/* payment information */
+main>div>section>div>div>form .payment_information_inputs>input {
+      border: 1px solid transparent;
+      height: 1.7rem;
+      padding: 0.3rem 0.5rem;
+      background-color: var(--form-input-background-color);
+}
+
+main>div>section>div>div>form .payment_information_inputs>input:nth-child(1) {
+      border-top-left-radius: 0.125rem;
+      border-bottom-left-radius: 0.125rem;
+}
+
+main>div>section>div>div>form .payment_information_inputs>input:nth-child(3) {
+      border-top-right-radius: 0.125rem;
+      border-bottom-right-radius: 0.125rem;
+}
+
+main>div>section>div>div>form .payment_information_inputs>input:focus {
+      outline: none;
+      border: 2px solid var(--primary-color);
+}
