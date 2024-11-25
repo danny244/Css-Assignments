@@ -3,217 +3,246 @@
 @tailwind utilities;
 
 :root {
-      --font-family: "Gilroy-Regular ☞";
-      --font-family-medium: "Gilroy-Medium ☞";
-      --font-family-Bold: "Gilroy-Bold ☞";
-      --font-family-heavy: "Gilroy-Heavy ☞";
+    --font-family: "Gilroy-Regular ☞";
+    --font-family-medium: "Gilroy-Medium ☞";
+    --font-family-Bold: "Gilroy-Bold ☞";
+    --font-family-heavy: "Gilroy-Heavy ☞";
 
-      --pricing-background-gradient : linear-gradient(180deg, #1E3448 99.99%, rgba(30, 52, 72, 0) 100%);
-      --background-color: hsla(0, 0%, 100%, 1);
-      --primary-color: hsla(216, 100%, 50%, 1);
-      --secondary-color: hsla(0, 0%, 100%, 1);
-      --tertiary-color: hsla(210, 55%, 98%, 1);
+    --primary-background-gradient: linear-gradient(180deg, #1E3448 99.99%, rgba(30, 52, 72, 0) 100%);
+    --background-color: hsla(0, 0%, 100%, 1);
+    --primary-color: hsla(216, 100%, 50%, 1);
+    --secondary-color: hsla(0, 0%, 100%, 1);
+    --tertiary-color: hsla(210, 55%, 98%, 1);
 
-      --color: hsla(0, 0%, 8%, 1);
+    --color: hsla(0, 0%, 8%, 1);
 
-      --font-weight: 500;
-      --font-size: 0.8rem;
-      --line-height: 1.5;
-      --h1-font-size: 1.5rem;
-      --h1-font-weight: 700;
+    --font-weight: 500;
+    --font-size: 0.8rem;
+    --line-height: 1.5;
+    --h1-font-size: 1.5rem;
+    --h1-font-weight: 700;
 
+    --border-color: #D6D6D6;
 
-      --form-color: hsla(211, 35%, 17%, 1);
-      --form-background-color: hsla(0, 0%, 100%, 1);
-      --form-inputs-border: 1px solid var(--primary-color);
-      --form-input-color: var(--color);
-      --form-input-background-color: hsla(216, 16%, 94%, 1);
-      --input-placeholder-color: hsla(213, 10%, 44%, 1);
-      --form-button-color: hsla(0, 0%, 100%, 1);
+    --form-color: hsla(211, 35%, 17%, 1);
+    --form-background-color: hsla(0, 0%, 100%, 1);
+    --form-inputs-border: 1px solid var(--primary-color);
+    --form-input-color: var(--color);
+    --form-input-background-color: hsla(216, 16%, 94%, 1);
+    --input-placeholder-color: hsla(213, 10%, 44%, 1);
+    --form-button-color: hsla(0, 0%, 100%, 1);
 
-      --max-width: 68rem;
-      --contents-max-width: 60rem;
+    --max-width: 68rem;
+    --contents-max-width: 60rem;
 }
 
 @layer base {
 
-      /* TODO: edit it later when you finsh in the html */
-      /* h1 {
-            @apply -text--h1-font-size -font--font-family-bold font-extrabold
-      }
+    /* TODO: edit it later when you finsh in the html */
+    /* h1 {
+          @apply -text--h1-font-size -font--font-family-bold font-extrabold
+    }
 
-      h2 {
-            @apply -font--font-family-bold -text--h1-font-size
-      }
+    h2 {
+          @apply -font--font-family-bold -text--h1-font-size
+    }
 
-      h3 {
-            @apply text-[1.2rem] -font--font-family-medium font-bold
+    h3 {
+          @apply text-[1.2rem] -font--font-family-medium font-bold
 
-      }*/
+    }*/
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"] {
+        -webkit-appearance: none;
+        margin: 0;
+        -moz-appearance: textfield !important;
+    }
 
 
+    main header ul.links li a,
+    main header ul.links li span:nth-child(1),
+    main header div p,
+    main header div button {
+        @apply -font--font-family-medium
+    }
 
+    main header ul.links li:nth-child(1) a, main header div p {
+        @apply -text--primary-color
+    }
 
 
-      input[type="number"]::-webkit-outer-spin-button,
-      input[type="number"]::-webkit-inner-spin-button,
-      input[type="number"] {
-            -webkit-appearance: none;
-            margin: 0;
-            -moz-appearance: textfield !important;
-      }
+    main header ul li:nth-child(2) div.features ul li {
+        @apply px-4 py-1 cursor-pointer transition-colors duration-500 font-semibold
+    }
 
+    main header ul li:nth-child(2) div.features ul li:nth-child(even) {
+        @apply my-1
+    }
 
+    main header ul li:nth-child(2) div.features ul li:hover {
+        @apply -bg--tertiary-color
+    }
 
+    main header ul li:nth-child(2) div.hide_features {
+        @apply opacity-0 invisible
+    }
 
 
-      main header ul.links li a,
-      main header ul.links li span:nth-child(1),
-      main header div p,
-      main header div button {
-            @apply -font--font-family-medium
-      }
+    main div.contents_container section.optimize_possibilities div div div.posibilities div.child {
+        @apply flex gap-12
+    }
 
-      main header ul.links li:nth-child(1) a, main header div p {
-            @apply -text--primary-color
-      }
+    main div.contents_container section.optimize_possibilities div div div.posibilities div.child div {
+        @apply flex flex-col gap-2
+    }
 
 
+    /* TODO: edit it later when you finish in the html */
+    main div.contents_container section.optimize_possibilities div div div.posibilities div.child div h3 {
+        @apply text-[1.2rem] -font--font-family-medium font-bold
+    }
 
+    main div.contents_container section.optimize_possibilities div div div.posibilities div.child div p {
+        @apply max-w-[7rem]
+    }
 
+    main div.contents_container section.optimize_possibilities div div div.posibilities div:nth-child(1) div:nth-child(2) p {
+        @apply pr-4
+    }
 
-      main header ul li:nth-child(2) div.features ul li {
-            @apply px-4 py-1 cursor-pointer transition-colors duration-500 font-semibold
-      }
 
-      main header ul li:nth-child(2) div.features ul li:nth-child(even) {
-            @apply my-1
-      }
+    main div.contents_container section.why_choose div div div.grid_contants {
+        @apply flex flex-col gap-y-4 w-fit
+    }
 
-      main header ul li:nth-child(2) div.features ul li:hover {
-            @apply -bg--tertiary-color
-      }
+    main div.contents_container section.why_choose div div div.grid_contants img {
+        @apply w-[2.5rem]
+    }
 
-      main header ul li:nth-child(2) div.hide_features {
-            @apply opacity-0 invisible
-      }
+    main div.contents_container section.why_choose div div div.grid_contants div h3 {
+        @apply text-[1.2rem] -font--font-family-medium
+    }
 
+    main div.contents_container section.why_choose div div div.grid_contants div p {
+        @apply max-w-[16rem] w-full
+    }
 
 
+    main div.contents_container section.pricing div.pricings_container div.price_panel {
+        @apply flex flex-col gap-y-3 -bg--background-color w-fit h-fit py-6 px-14 rounded-lg overflow-hidden border -border--primary-color -shadow--shadow-pricing
+    }
 
+    main div.contents_container section.pricing div.pricings_container div.price_panel > p {
+        @apply text-[1rem] -font--font-family-medium font-bold
+    }
 
+    main div.contents_container section.pricing div.pricings_container div.price_panel > div {
+        @apply flex flex-col
+    }
 
-      main div.contents_container section.optimize_possibilities div div div.posibilities div.child {
-            @apply flex gap-12
-      }
+    main div.contents_container section.pricing div.pricings_container div.price_panel > div > h2 {
+        @apply -font--font-family-bold -text--h1-font-size
+    }
 
-      main div.contents_container section.optimize_possibilities div div div.posibilities div.child div {
-            @apply flex flex-col gap-2
-      }
+    main div.contents_container section.pricing div.pricings_container div.price_panel > div > p {
+        @apply text-[0.9rem] -font--font-family-medium
+    }
 
+    main div.contents_container section.pricing div.pricings_container div.price_panel ul {
+        @apply flex flex-col gap-y-4 mt-2
+    }
 
-      /* TODO: edit it later when you finsh in the html */
-      main div.contents_container section.optimize_possibilities div div div.posibilities div.child div h3 {
-            @apply text-[1.2rem] -font--font-family-medium font-bold
-      }
+    main div.contents_container section.pricing div.pricings_container div.price_panel ul li {
+        @apply flex gap-2 items-center
+    }
 
-      main div.contents_container section.optimize_possibilities div div div.posibilities div.child div p {
-            @apply max-w-[7rem]
-      }
+    main div.contents_container section.pricing div.pricings_container div.price_panel ul li img {
+        /* background-color: chartreuse; */
+    }
 
-      main div.contents_container section.optimize_possibilities div div div.posibilities div:nth-child(1) div:nth-child(2) p {
-            @apply pr-4
-      }
 
+    main div.contents_container section.pricing div.pricings_container div.price_panel:nth-child(1) {
+        @apply -mr-7 z-0
+    }
 
+    main div.contents_container section.pricing div.pricings_container div.price_panel:nth-child(2) {
+        @apply py-20 -bg--primary-background-gradient -text--secondary-color z-10
+    }
 
+    main div.contents_container section.pricing div.pricings_container div.price_panel:nth-child(3) {
+        @apply -ml-7 z-0
+    }
 
 
 
 
-      main div.contents_container section.why_choose div div div.grid_contants {
-            @apply flex flex-col gap-y-4 w-fit
-      }
 
-      main div.contents_container section.why_choose div div div.grid_contants img {
-            @apply w-[2.5rem]
-      }
 
-      main div.contents_container section.why_choose div div div.grid_contants div h3 {
-            @apply text-[1.2rem] -font--font-family-medium
-      }
 
-      main div.contents_container section.why_choose div div div.grid_contants div p {
-            @apply max-w-[16rem] w-full
-      }
 
+    main div.contents_container section.trim_url form > div input {
+        @apply outline-none border -border--primary-color px-2 h-[2rem] w-full py-2 rounded-md bg-transparent placeholder:-text--primary-color
 
+    }
 
+    main div.contents_container section.trim_url form > div > input:nth-child(1) {
+        @apply col-span-2
 
+    }
 
+    main div.contents_container section.trim_url form > div > div {
+        /*@apply bg-blue-500*/
 
+    }
 
+    .hide_trim_url_domain_dropdown {
+        @apply opacity-0 invisible
+    }
 
 
-      main div.contents_container section.pricing div.pricings_container div.price_panel {
-            @apply  flex flex-col gap-y-3 -bg--background-color w-fit h-fit py-6 px-14 rounded-lg overflow-hidden border -border--primary-color -shadow--shadow-pricing
-      }
-
-      main div.contents_container section.pricing div.pricings_container div.price_panel > p {
-            @apply text-[1rem] -font--font-family-medium font-bold
-      }
-
-      main div.contents_container section.pricing div.pricings_container div.price_panel > div {
-            @apply flex flex-col
-      }
-
-      main div.contents_container section.pricing div.pricings_container div.price_panel > div > h2 {
-            @apply -font--font-family-bold -text--h1-font-size
-      }
-
-      main div.contents_container section.pricing div.pricings_container div.price_panel > div > p {
-            @apply text-[0.9rem] -font--font-family-medium
-      }
-
-      main div.contents_container section.pricing div.pricings_container div.price_panel ul {
-            @apply flex flex-col gap-y-4 mt-2
-      }
-
-      main div.contents_container section.pricing div.pricings_container div.price_panel ul li {
-            @apply flex gap-2 items-center
-      }
-
-      main div.contents_container section.pricing div.pricings_container div.price_panel ul li img {
-            /* background-color: chartreuse; */
-      }
-
-
-
-      main div.contents_container section.pricing div.pricings_container div.price_panel:nth-child(1) {
-            @apply -mr-7 z-0
-      }
-
-      main div.contents_container section.pricing div.pricings_container div.price_panel:nth-child(2) {
-            @apply  py-20 -bg--pricing-background-gradient -text--secondary-color z-10
-      }
-
-      main div.contents_container section.pricing div.pricings_container div.price_panel:nth-child(3) {
-            @apply -ml-7 z-0
-      }
 }
 
 
 
-input {
-      outline: none;
-      border: none;
+
+
+
+
+
+
+.faq_answers {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.2s;
 }
+
+.faq_answers > p {
+    overflow: hidden;
+}
+
+.faq_answers.active {
+    padding-bottom: 0.5rem /* 8px */;
+    grid-template-rows: 1fr;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 main {
-      min-width: inherit;
-      min-height: inherit;
-      display: flex;
-      justify-content: center;
+    min-width: inherit;
+    min-height: inherit;
+    display: flex;
+    justify-content: center;
 }
 
 

@@ -195,7 +195,6 @@ dropdownInput
       .forEach((input, index) => {
             const img_element = input.previousElementSibling;
 
-
             input.addEventListener('focus', (e) => openDropDown(index, e, input, img_element))
             input.addEventListener('blur', (e) => closeDropDown(e, img_element))
             input.addEventListener('input', (e) => searchDropdown(e, index))

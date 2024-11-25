@@ -24,7 +24,7 @@ module.exports = {
                         '--font-family-medium': "var(--font-family-medium)",
                   },
                   backgroundImage: {
-                        "--pricing-background-gradient": "var(--pricing-background-gradient)",
+                        "--primary-background-gradient": "var(--primary-background-gradient)",
                   },
                   fontWeight: {
                         normal: "var(--font-weight)",
