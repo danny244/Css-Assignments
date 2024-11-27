@@ -5,68 +5,85 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <link rel="stylesheet" href="./fonts/font.css" />
-      <link rel="stylesheet" href="/lib/overlay/overlay.css" />
-      <link rel="stylesheet" href="/lib/lib.css" />
-      <link rel="stylesheet" href="./index.css" />
       <link rel="stylesheet" href="./output.css" />
+      <link rel="stylesheet" href="./fonts/font.css" />
+      <link rel="stylesheet" href="/lib/lib.css" />
+      <link rel="stylesheet" href="/lib/overlay/overlay.css" />
+      <link rel="stylesheet" href="./index.css" />
 
       <title>WP - Pusher</title>
 </head>
 
 <body>
-      <button class="fixed bottom-4 right-4 z-40 border-none outline-none bg-transparent" id="overlay-button">
-            <img hidden class="w-[1.5rem] animate-bounce" src="../images/menu/dark.png" alt="icon">
-            <img class="w-[1.5rem] animate-bounce" src="../images/menu/dark.png" alt="icon">
+
+      <button class="toggle_overlay bounce">
+            <img hidden src="../images/menu/dark.png" alt="icon">
+            <img src="../images/menu/dark.png" alt="icon">
       </button>
 
       <div class="overlay">
-            <div class="overlay-contents">
-                  <div>
-                        <section>
-                              <header>
-                                    <h1>ALt School CSS Assignments</h1>
-                              </header>
-                        </section>
+            <section class="overlay_container">
 
-                        <section>
-                              <div>
-                                    <a href="../otter/index.html">
-                                          <div>
-                                                <img src="/lib/overlay/images/otter.png" alt="otter" />
-                                          </div>
+
+                  <div class="overlay_items">
+
+                        <header>
+                              <h1>ALt School CSS Assignments</h1>
+                        </header>
+
+                        <div class="overlay_grid">
+                              <div class="overlay_grid_items">
+                                    <a href="/otter/index.html">
+
+                                          <img src="/images/otter.png" alt="otter">
                                     </a>
                               </div>
 
-                              <div>
-                                    <a href="../huckleberry/index.html">
-                                          <div>
-                                                <img src="/lib/overlay/images/huckleberry.png" alt="huckleberry" />
-                                          </div>
+                              <div class="overlay_grid_items">
+                                    <a href="/huckleberry/index.html">
+
+                                          <img src="/images/huckleberry.png" alt="huckleberry">
                                     </a>
                               </div>
-                              <!-- div> -->
-                              <div>
-                                    <a href="../watch/index.html">
-                                          <div>
-                                                <img src="/lib/overlay/images/watch.png" alt="watch" />
-                                          </div>
+
+                              <div class="overlay_grid_items">
+                                    <a href="/watch/index.html">
+
+                                          <img src="/images/watch.png" alt="watch">
                                     </a>
                               </div>
-                              <!-- div> -->
-                              <div>
-                                    <a href="../individuals/index.html">
-                                          <div>
-                                                <img src="/lib/overlay/images/individuals.png" alt="individual" />
-                                          </div>
+
+                              <div class="overlay_grid_items">
+                                    <a href="/individuals/index.html">
+
+                                          <img src="/images/individuals.png" alt="individual">
                                     </a>
                               </div>
-                        </section>
+
+                              <div class="overlay_grid_items">
+                                    <a href="/wp-pusher/index.html">
+
+                                          <img src="/images/wp_p.png" alt="wp-pusher">
+                                    </a>
+                              </div>
+
+                              <div class="overlay_grid_items">
+                                    <a href="/scissor/index.html">
+
+                                          <img src="/images/scissor.png" alt="scissor">
+                                    </a>
+                              </div>
+                        </div>
+
                   </div>
-            </div>
+
+
+            </section>
       </div>
 
       <main>
+
+
             <div class="w-full relative">
                   <header class="w-screen fixed z-10 px-4 bg-[--background-color]">
                         <nav class="max-w-[var(--max-width)] mx-auto flex justify-between items-center py-2 h-[3.6rem]">
@@ -202,8 +219,7 @@
                                                                         class="flex flex-wrap items-center w-full payment_information_inputs">
                                                                         <input required type="number"
                                                                               placeholder="Card Number"
-                                                                              autocomplete="billing" class="flex-1 "
-                                                                               />
+                                                                              autocomplete="billing" class="flex-1 " />
                                                                         <input required type="text" placeholder="MM/YY"
                                                                               class="w-[4rem]" autocomplete="billing" />
                                                                         <input required type="number" placeholder="CVC"
@@ -286,7 +302,8 @@
                                     </aside>
                               </div>
                         </div>
-                        <p class="mt-6 font-medium text-[hsla(200, 6%, 41%, 1)]">© 2018 WP Pusher IVS · <span class="text-[--sidebar-background-color]">Terms of Service</span></p>
+                        <p class="mt-6 font-medium text-[hsla(200, 6%, 41%, 1)]">© 2018 WP Pusher IVS · <span
+                                    class="text-[--sidebar-background-color]">Terms of Service</span></p>
                   </section>
 
             </div>

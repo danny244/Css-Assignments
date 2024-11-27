@@ -1,44 +1,87 @@
-:root {
-	--max-width: 68rem;
-	--font-family: "Edu AU VIC WA NT Pre", cursive;
 
-	/* --background-color: hsl(0deg 0% 12.55%); */
-	--color: hsl(300, 4.3%, 13.5%);
-	--otter-background-color: hsl(0, 0%, 100%);
-	--header-background-color: hsl(324.94deg 100% 50%);
 
-	--font-weight: 500;
-	--font-size: 0.7rem;
-	--line-height: 1.5;
-
-	--h1-font-size: 1.2rem;
-	--h1-font-weight: bold;
-
-	--border-radius: 0.4rem;
+button.toggle_overlay {
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	padding: 0.2rem;
+	cursor: pointer;
+	z-index: 310;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	width: fit-content;
+	height: fit-content;
 }
 
-main.home {
-	min-width: inherit;
-	min-height: inherit;
+
+
+div.overlay {
+	width: 100vw;
+	height: 100vh;
+
+	position: absolute;
+
+	z-index: 300;
+
+	background-color: #ffffffff;
+	
+}
+
+
+section.overlay_container {
+	font-family: "Edu AU VIC WA NT Pre", cursive;
+
+	min-width: 100vw;
+	min-height: 100vh;
+
+	width: fit-content;
+	height: fit-content;
+
+	font-size: 0.7rem;
+	line-height: 1.5;
+	font-weight: 500;
+
+	color: hsl(300, 4.3%, 13.5%);
+	/* background-color: aqua; */
+
 	display: flex;
 	justify-content: center;
-	text-align: center;
+	align-items: center;
+
+	padding: 3rem 0.9rem;
+
+	/* position: relative; */
+	top: 0;
+	left: 0;
+
+
+
 }
 
-main.home > div {
-	padding: 4rem 1rem;
-
+section.overlay_container div.overlay_items {	
+	max-width: 68rem;
 	width: 100%;
-	max-width: var(--max-width);
+	height: 100%;
 
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	/* background-color: pink; */
+	margin: 0 auto;
+	
 
-	gap: 2rem;
 }
 
-main.home > div > section:nth-child(2) {
+
+section.overlay_container div.overlay_items header {
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.2rem;
+
+	margin-bottom: 2rem;
+}
+
+
+
+section.overlay_container div.overlay_items div.overlay_grid {
 	display: grid;
 	grid-template-columns: repeat(4, minmax(0, 1fr));
 	place-items: center;
@@ -46,11 +89,13 @@ main.home > div > section:nth-child(2) {
 	gap: 2rem;
 }
 
-main.home > div > section > div {
+
+
+section.overlay_container div.overlay_items div.overlay_grid div.overlay_grid_items {
 	width: 100%;
 	height: 13rem;
 
-	border-radius: var(--border-radius);
+	border-radius: 0.4rem;
 
 	overflow: hidden;
 
@@ -59,18 +104,9 @@ main.home > div > section > div {
 	transition: all 0.8s ease-in-out;
 }
 
-/* main.home > div > section > div:hover,
-main.home > div > section > div:focus {
-	transform: translateY(-1rem);
-      z-index: 10;
-} */
 
-main.home > div > section > div > a > div {
-	width: inherit;
-	height: 100%;
-}
 
-main.home > div > section > div > a > div > img {
+section.overlay_container div.overlay_items div.overlay_grid div.overlay_grid_items a img {
 	object-position: left;
 	object-fit: cover;
 	width: 100%;
@@ -78,6 +114,9 @@ main.home > div > section > div > a > div > img {
 
 	animation: animate both 3s infinite alternate;
 }
+
+
+
 
 @keyframes animate {
 	100% {
@@ -93,30 +132,32 @@ main.home > div > section > div > a > div > img {
 	}
 }
 
+
+
 @media (max-width: 1024px) {
-	main.home > div > section:nth-child(2) {
+	section.overlay_container div.overlay_items div.overlay_grid {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 
-	main.home > div > section > div {
+	section.overlay_container div.overlay_items div.overlay_grid div.overlay_grid_items {
 		width: 100%;
 		height: 13rem;
 	}
 }
 
 @media (max-width: 768px) {
-	main.home > div > section:nth-child(2) {
+	section.overlay_container div.overlay_items div.overlay_grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
-	main.home > div > section > div {
+	section.overlay_container div.overlay_items div.overlay_grid div.overlay_grid_items {
 		width: 100%;
 		height: 19rem;
 	}
 }
 
 @media (max-width: 550px) {
-	main.home > div > section:nth-child(2) {
+	section.overlay_container div.overlay_items div.overlay_grid {
 		grid-template-columns: repeat(1, minmax(0, 1fr));
 	}
 }
